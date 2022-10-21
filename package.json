@@ -20,5 +20,8 @@
   "homepage": "https://github.com/ArtemYakushkin/goit-nodejs-hw-01#readme",
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
   }
 }
