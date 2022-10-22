@@ -53,8 +53,8 @@ async function removeContact(contactId) {
         const allContacts = await listContacts();
         const idx = allContacts.findIndex(({ id }) => id === contactId);
         if (idx === -1) return null;
-        const deleteContact = allContacts.splice(idx, 1);
-        await updateSourceFile();
+        const [deleteContact] = allContacts.splice(idx, 1);
+        await updateSourceFile(allContacts);
         return deleteContact;
     } catch(error) {
         console.log(error);
